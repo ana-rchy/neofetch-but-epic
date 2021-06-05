@@ -4000,6 +4000,18 @@ print_ascii() {
     ascii_data="${ascii_data//\$\{c12\}/$c12}"
     ascii_data="${ascii_data//\$\{c13\}/$c13}"
     ascii_data="${ascii_data//\$\{c14\}/$c14}"
+    ascii_data="${ascii_data//\$\{c15\}/$c15}"
+    ascii_data="${ascii_data//\$\{c16\}/$c16}"
+    ascii_data="${ascii_data//\$\{c17\}/$c17}"
+    ascii_data="${ascii_data//\$\{c18\}/$c18}"
+    ascii_data="${ascii_data//\$\{c19\}/$c19}"
+    ascii_data="${ascii_data//\$\{c20\}/$c20}"
+    ascii_data="${ascii_data//\$\{c21\}/$c21}"
+    ascii_data="${ascii_data//\$\{c22\}/$c22}"
+    ascii_data="${ascii_data//\$\{c23\}/$c23}"
+    ascii_data="${ascii_data//\$\{c24\}/$c24}"
+    ascii_data="${ascii_data//\$\{c25\}/$c25}"
+    ascii_data="${ascii_data//\$\{c26\}/$c26}"
 
     ((text_padding=ascii_len+gap))
     printf '%b\n' "$ascii_data${reset}"
@@ -4592,7 +4604,23 @@ set_colors() {
     c7="$(color "$7")${ascii_bold}"
     c8="$(color "$8")${ascii_bold}"
     c9="$(color "$9")${ascii_bold}"
-    c0="$(color "$0")${ascii_bold}"
+    c10="$(color "${10}")${ascii_bold}"
+    c11="$(color "${11}")${ascii_bold}"
+    c12="$(color "${12}")${ascii_bold}"
+    c13="$(color "${13}")${ascii_bold}"
+    c14="$(color "${14}")${ascii_bold}"
+    c15="$(color "${15}")${ascii_bold}"
+    c16="$(color "${16}")${ascii_bold}"
+    c17="$(color "${17}")${ascii_bold}"
+    c18="$(color "${18}")${ascii_bold}"
+    c19="$(color "${19}")${ascii_bold}"
+    c20="$(color "${20}")${ascii_bold}"
+    c21="$(color "${21}")${ascii_bold}"
+    c22="$(color "${22}")${ascii_bold}"
+    c23="$(color "${23}")${ascii_bold}"
+    c24="$(color "${24}")${ascii_bold}"
+    c25="$(color "${25}")${ascii_bold}"
+    c26="$(color "${26}")${ascii_bold}"
 
     [[ "$color_text" != "off" ]] && set_text_colors "$@"
 }
@@ -5300,13 +5328,13 @@ get_args() {
 
             "--ascii_colors")
                 unset ascii_colors
-                for arg in "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" "$0"; do
+                for arg in "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" "${10}" "${11}" "${12}" "${13}" "${14}" "${15}" "${16}" "${17}" "${18}" "${19}" "${20}" "${21}" "${22}" "${23}" "${24}" "${25}" "${26}" "${27}"; do
                     case $arg in
                         "-"*) break ;;
                         *) ascii_colors+=("$arg")
                     esac
                 done
-                ascii_colors+=(7 7 7 7 7 7 7 7 7)
+                ascii_colors+=(7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7)
             ;;
 
             "--ascii_distro")
